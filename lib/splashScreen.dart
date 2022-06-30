@@ -1,6 +1,4 @@
-// ignore_for_file: file_names
-
-//import 'package:animated_splash_screen/animated_splash_screen.dart';
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:wekasuwa/homePage.dart';
 import 'dart:async';
@@ -17,14 +15,13 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(seconds: 3),
-      () => Navigator.pushAndRemoveUntil<dynamic>(
-          context,
-          MaterialPageRoute(
-            builder: (context) => HomePage(),
-          ),
-          (Route<dynamic> route) => false),
-    );
+        const Duration(seconds: 3),
+        () => Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const HomePage(),
+              ),
+            ));
   }
 
   @override
@@ -48,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       backgroundColor: Colors.black,
                       radius: 100.0,
                       child: Image(
-                        image: AssetImage('lib/icononly.png'),
+                        image: AssetImage('lib/iconsplash.png'),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -77,12 +74,12 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                   Padding(
                     padding: EdgeInsets.all(20.0),
-                    child: Text('Fiskagroup',
+                    child: Text('fiska',
                         softWrap: true,
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            letterSpacing: 1.0,
+                            letterSpacing: 3.0,
                             fontSize: 20.0)),
                   ),
                 ],
