@@ -6,23 +6,23 @@
 
 #import "GeneratedPluginRegistrant.h"
 
-#if __has_include(<modal_progress_hud_nsn/ModalProgressHudNsnPlugin.h>)
-#import <modal_progress_hud_nsn/ModalProgressHudNsnPlugin.h>
+#if __has_include(<package_info_plus/FLTPackageInfoPlusPlugin.h>)
+#import <package_info_plus/FLTPackageInfoPlusPlugin.h>
 #else
-@import modal_progress_hud_nsn;
+@import package_info_plus;
 #endif
 
-#if __has_include(<webview_flutter_wkwebview/FLTWebViewFlutterPlugin.h>)
-#import <webview_flutter_wkwebview/FLTWebViewFlutterPlugin.h>
+#if __has_include(<url_launcher_ios/FLTURLLauncherPlugin.h>)
+#import <url_launcher_ios/FLTURLLauncherPlugin.h>
 #else
-@import webview_flutter_wkwebview;
+@import url_launcher_ios;
 #endif
 
 @implementation GeneratedPluginRegistrant
 
 + (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
-  [ModalProgressHudNsnPlugin registerWithRegistrar:[registry registrarForPlugin:@"ModalProgressHudNsnPlugin"]];
-  [FLTWebViewFlutterPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTWebViewFlutterPlugin"]];
+  [FLTPackageInfoPlusPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTPackageInfoPlusPlugin"]];
+  [FLTURLLauncherPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTURLLauncherPlugin"]];
 }
 
 @end

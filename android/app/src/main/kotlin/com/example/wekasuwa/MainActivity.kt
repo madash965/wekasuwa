@@ -1,4 +1,4 @@
-package com.example.wekasuwa
+package com.fiskagroup.wekasuwa
 
 import io.flutter.embedding.android.FlutterActivity
 

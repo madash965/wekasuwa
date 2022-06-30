@@ -17,13 +17,13 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(seconds: 6),
-      () => Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const HomePage(),
-        ),
-      ),
+      const Duration(seconds: 3),
+      () => Navigator.pushAndRemoveUntil<dynamic>(
+          context,
+          MaterialPageRoute(
+            builder: (context) => HomePage(),
+          ),
+          (Route<dynamic> route) => false),
     );
   }
 
@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
         fit: StackFit.expand,
         children: [
           Container(
-            color: Colors.orange,
+            color: Colors.black,
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -45,8 +45,8 @@ class _SplashScreenState extends State<SplashScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     CircleAvatar(
-                      backgroundColor: Colors.white,
-                      radius: 70.0,
+                      backgroundColor: Colors.black,
+                      radius: 100.0,
                       child: Image(
                         image: AssetImage('lib/icononly.png'),
                         fit: BoxFit.cover,
@@ -54,11 +54,11 @@ class _SplashScreenState extends State<SplashScreen> {
                     ),
                     Padding(
                       padding: EdgeInsets.all(16.0),
-                      child: Text('Wekasuwa',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 25.0)),
+                      // child: Text('Wekasuwa',
+                      //     style: TextStyle(
+                      //         color: Colors.white,
+                      //         fontWeight: FontWeight.bold,
+                      //         fontSize: 25.0)),
                     )
                   ],
                 ),
@@ -73,17 +73,17 @@ class _SplashScreenState extends State<SplashScreen> {
                         style: TextStyle(
                             color: Colors.white60,
                             fontWeight: FontWeight.bold,
-                            fontSize: 18.0)),
+                            fontSize: 16.0)),
                   ),
                   Padding(
                     padding: EdgeInsets.all(20.0),
-                    child: Text('Fiska',
+                    child: Text('Fiskagroup',
                         softWrap: true,
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            letterSpacing: 8.0,
-                            fontSize: 25.0)),
+                            letterSpacing: 1.0,
+                            fontSize: 20.0)),
                   ),
                 ],
               ),
