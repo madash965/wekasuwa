@@ -153,7 +153,7 @@ class _HomePage extends State<HomePage> {
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerFloat,
           floatingActionButton: FloatingActionButton(
-            child: FaIcon(
+            child: const FaIcon(
               FontAwesomeIcons.retweet,
               size: 24,
             ),
